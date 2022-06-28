@@ -11,10 +11,19 @@
   --light-blue-transparent: hsl(188deg 100% 65% / 13%);
 }
 
+a {
+  text-decoration: none;
+}
+a:focus {
+  outline: red;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
 main {
   width: 100vw;
   height: 100vh;
-  background-color: hsl(225deg 71% 12%);
+  background-color: var(--bg-dark-blue);
 }
 
 /* Header */
@@ -39,35 +48,43 @@ header {
 .list-container-header {
   display: flex;
   margin-right: 20px;
+  counter-reset: item 0;
 }
 
 .list-item {
-  margin: 0 15px;
   color: hsl(212deg 100% 86%);
   font-size: 14px;
   font-family: "Jura", sans-serif;
+  list-style: none;
+  counter-increment: item 1;
 }
-.list-item::marker {
+.list-item::before {
+  content: "0" counter(item) ".";
+  margin-right: 8px;
+  color: var(--light-blue);
   font-size: 16px;
-  color: hsl(188deg 96% 61%);
+}
+
+.header-list-link {
+  margin: 0 15px;
 }
 
 .header-resume-button {
   border-image: linear-gradient(45deg, #25d0ff, #a400ff) 1;
-  color: hsl(188deg 97% 61%);
+  color: var(--light-blue);
   background-color: transparent;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   outline: none;
 
   transition: 150ms;
   cursor: pointer;
 }
 .header-resume-button:hover {
-  background-color: hsl(188deg 100% 65% / 13%);
+  background-color: var(--light-blue-transparent);
 }
 .header-resume-button:focus {
-  background-color: hsl(188deg 100% 65% / 13%);
+  background-color: var(--light-blue-transparent);
 }
 
 .header-menu {
