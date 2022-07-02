@@ -20,29 +20,54 @@
   </head>
   <body>
     <header>
-      <div class="header-logo-container">
+      <a class="header-logo-container" href="">
         <img
           src="assets/logo.svg"
           alt="Logo"
           class="header-logo"
           draggable="false"
         />
-      </div>
+      </a>
 
-      <div class="header-menu">
+      <nav class="header-menu">
         <ol class="list-container-header">
-          <li class="list-item">About</li>
-          <li class="list-item">Skills</li>
-          <li class="list-item">Work</li>
+          <a href="" class="header-list-link"
+            ><li class="list-item">About</li></a
+          >
+          <a href="" class="header-list-link"
+            ><li class="list-item">Skills</li></a
+          >
+          <a href="" class="header-list-link"
+            ><li class="list-item">Work</li></a
+          >
         </ol>
 
         <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" tabindex="-1"
           ><button class="header-resume-button">Resume</button></a
         >
-      </div>
-      <!-- </nav> -->
+      </nav>
     </header>
+
+    <aside class="sidebar sidebar-left">
+      <img src="assets/github.svg" alt="github" class="contact-icon-sidebar" />
+      <img
+        src="assets/discord.svg"
+        alt="discord"
+        class="contact-icon-sidebar"
+      />
+    </aside>
+
     <main class="bg-primary-800 w-screen h-screen"></main>
+
+    <aside class="sidebar sidebar-right">
+      <img
+        src="assets/telegram.svg"
+        alt="telegram"
+        class="contact-icon-sidebar"
+      />
+      <img src="assets/email.svg" alt="e-mail" class="contact-icon-sidebar" />
+    </aside>
+
     <footer></footer>
   </body>
 
