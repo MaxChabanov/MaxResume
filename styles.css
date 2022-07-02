@@ -9,12 +9,14 @@
   --bg-dark-blue: hsl(225deg 71% 12%);
   --light-blue: hsl(188deg 97% 61%);
   --light-blue-transparent: hsl(188deg 100% 65% / 13%);
+
+  --side-margin: 48px;
 }
 
 a {
   text-decoration: none;
 }
-a:focus {
+a:focus-visible {
   outline: var(--light-blue);
   outline-width: 2px;
   outline-style: solid;
@@ -24,6 +26,7 @@ a:focus {
 main {
   width: 100vw;
   height: 100vh;
+  z-index: 0;
   background-color: var(--bg-dark-blue);
 }
 
@@ -31,11 +34,12 @@ main {
 header {
   display: flex;
   width: 100vw;
-  padding: 0 3rem;
+  padding: 0 var(--side-margin);
   height: 6rem;
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: 1;
 }
 
 .header-logo-container {
@@ -43,7 +47,7 @@ header {
   height: 55px;
 }
 
-.header-logo-container:focus {
+.header-logo-container:focus-visible {
   outline-offset: 5px;
 }
 
@@ -70,12 +74,16 @@ header {
   font-family: "Jura", sans-serif;
   list-style: none;
   counter-increment: item 1;
+  transition: 100ms;
 }
 .list-item::before {
   content: "0" counter(item) ".";
   margin-right: 8px;
   color: var(--light-blue);
   font-size: 16px;
+}
+.list-item:hover {
+  color: hsl(212deg 100% 93%);
 }
 
 .header-list-link {
@@ -87,7 +95,7 @@ header {
   color: var(--light-blue);
   background-color: transparent;
   padding: 10px;
-  font-size: 0.9rem;
+  font-size: 15px;
   outline: none;
 
   transition: 150ms;
@@ -96,7 +104,7 @@ header {
 .header-resume-button:hover {
   background-color: var(--light-blue-transparent);
 }
-.header-resume-button:focus {
+.header-resume-button:focus-visible {
   background-color: var(--light-blue-transparent);
 }
 
@@ -105,12 +113,28 @@ header {
   align-items: center;
 }
 
-/* Animations */
-@keyframes icon-hue-rotate {
-  from {
-    filter: hue-rotate(0deg) drop-shadow(2px 4px 6px black);
-  }
-  to {
-    filter: hue-rotate(360deg) drop-shadow(2px 4px 6px black);
-  }
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  display: flex;
+  width: 65px;
+  bottom: 24px;
+  left: var(--side-margin);
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
 }
+.sidebar:last-child {
+  margin: 0;
+}
+.sidebar-right {
+  right: var(--side-margin);
+  left: auto;
+}
+
+.contact-icon-sidebar {
+  width: 25px;
+  filter: invert() drop-shadow(2px 4px 6px black);
+}
+
+/* Animations */
