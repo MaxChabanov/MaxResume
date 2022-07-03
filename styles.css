@@ -91,7 +91,7 @@ header {
 }
 
 .header-resume-button {
-  border-image: linear-gradient(45deg, #2551ff, #a400ff) 1;
+  border-image: linear-gradient(45deg, #3ba5fc, #a400ff) 1;
   color: var(--light-blue);
 
   background-color: transparent;
