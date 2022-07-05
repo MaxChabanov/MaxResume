@@ -8,7 +8,13 @@
 :root {
   --bg-dark-blue: hsl(225deg 71% 12%);
   --light-blue: hsl(188deg 97% 61%);
+  --light-blue-text: hsl(180deg 63% 54%);
   --light-blue-transparent: hsl(188deg 100% 65% / 13%);
+  --heading-big: clamp(40px, 8vw, 80px);
+
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
 
   --side-margin: 48px;
 }
@@ -21,13 +27,6 @@ a:focus-visible {
   outline-width: 2px;
   outline-style: solid;
   outline-offset: 10px;
-}
-
-main {
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  background-color: var(--bg-dark-blue);
 }
 
 /* Header */
@@ -70,7 +69,7 @@ header {
 
 .list-item {
   color: hsl(212deg 100% 86%);
-  font-size: 14px;
+  font-size: var(--font-sm);
   font-family: "Jura", sans-serif;
   list-style: none;
   counter-increment: item 1;
@@ -80,7 +79,7 @@ header {
   content: "0" counter(item) ".";
   margin-right: 8px;
   color: var(--light-blue);
-  font-size: 16px;
+  font-size: var(--font-md);
 }
 .list-item:hover {
   color: hsl(212deg 100% 93%);
@@ -96,7 +95,7 @@ header {
 
   background-color: transparent;
   padding: 10px;
-  font-size: 15px;
+  font-size: calc(var(--font-md) - 1px);
   outline: none;
 
   transition: 150ms;
@@ -112,6 +111,31 @@ header {
 .header-menu {
   display: flex;
   align-items: center;
+}
+
+/* Main */
+main {
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  padding: 0 calc(var(--side-margin) + 150px);
+  background-color: var(--bg-dark-blue);
+}
+
+.introduction-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.introduction-greeting {
+  color: var(--light-blue-text);
+  margin-bottom: 25px;
+}
+
+.heading-big {
+  font-size: var(--heading-big);
 }
 
 /* Sidebar */
@@ -135,7 +159,7 @@ header {
 
 .contact-icon-sidebar {
   width: 25px;
-  filter: invert() drop-shadow(2px 4px 6px black);
+  filter: invert() drop-shadow(2px 4px 6px black) brightness(2);
 }
 
 /* Animations */
