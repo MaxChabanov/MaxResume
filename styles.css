@@ -1,0 +1,32 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-light: hsl(190, 77%, 88%);
+  --background: hsl(239, 94%, 19%);
+}
+
+/* ===== Main ===== */
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--background);
+}
+
+/* -----Introduction----- */
+.welcome-container {
+  text-align: center;
+  color: var(--text-light);
+}
+
+.welcome-title {
+  font-family: "Rubik Mono One", sans-serif;
+}
