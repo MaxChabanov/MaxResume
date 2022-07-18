@@ -1,4 +1,4 @@
-/* Global */
+/* =====Global===== */
 * {
   margin: 0;
   padding: 0;
@@ -7,25 +7,41 @@
 
 :root {
   --text-light: hsl(190, 77%, 88%);
-  --background-start: hsl(181, 67%, 50%);
+  --sky-bg: hsl(208deg 100% 93%);
+  --background: linear-gradient(
+    180deg,
+    hsl(202deg 98% 37%),
+    hsl(202deg 98% 25%)
+  );
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0;
 }
 
 /* =====Header===== */
 header {
+  background-color: var(--sky-bg);
   background-repeat: repeat-x;
   background-image: url(assets/wave.png);
   background-position: bottom;
-  background-size: 750px;
+  background-size: 670px;
   height: 200px;
+}
+
+.boat {
+  width: 210px;
+  margin-left: 55px;
+  height: 210px;
 }
 
 /* ===== Main ===== */
 main {
-  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-color: var(--background);
+  background: var(--background);
 }
