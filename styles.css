@@ -12,7 +12,11 @@
 
 /* =====Header===== */
 header {
+  background-repeat: repeat-x;
   background-image: url(assets/wave.png);
+  background-position: bottom;
+  background-size: 750px;
+  height: 200px;
 }
 
 /* ===== Main ===== */
