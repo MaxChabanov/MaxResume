@@ -22,24 +22,33 @@
 
 /* =====Header===== */
 header {
+  display: flex;
+  height: 500px;
   background-color: var(--sky-bg);
   background-repeat: repeat-x;
-  background-image: url(assets/wave.png);
-  background-position: bottom;
-  background-size: 670px;
-  height: 200px;
+  background-image: url(assets/waves.png), url(assets/clouds.png);
+  background-position: bottom, top;
+  background-size: 670px, 1100px;
+  align-items: flex-end;
+}
+
+.clouds {
+  width: 100vw;
+  display: flex;
 }
 
 .boat {
   width: 210px;
-  margin-left: 55px;
   height: 210px;
+
+  margin-left: 55px;
 }
 
 /* ===== Main ===== */
 main {
-  height: 100vh;
   display: flex;
+  height: 100vh;
+
   align-items: center;
   justify-content: center;
 
