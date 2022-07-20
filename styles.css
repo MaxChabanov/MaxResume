@@ -42,6 +42,8 @@ header {
   height: 210px;
 
   margin-left: 55px;
+
+  animation: float 3s linear infinite;
 }
 
 .dive-in-btn {
@@ -51,10 +53,25 @@ header {
   background-image: url(assets/images/button.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 135px;
+  background-size: 120px;
   background-color: transparent;
 
-  padding: 30px;
+  margin-bottom: 20px;
+  margin-left: 240px;
+
+  padding: 40px;
+  padding-left: 42px;
+
+  user-select: none;
+
+  cursor: pointer;
+
+  animation: float 3s linear infinite;
+}
+
+.dive-in-btn p {
+  font-size: 28px;
+  font-family: "VT323";
 }
 
 /* ===== Main ===== */
@@ -66,4 +83,16 @@ main {
   justify-content: center;
 
   background: var(--background);
+}
+
+@keyframes float {
+  0% {
+    margin-bottom: 20px;
+  }
+  50% {
+    margin-bottom: 25px;
+  }
+  100% {
+    margin-bottom: 20px;
+  }
 }
