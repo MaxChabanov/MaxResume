@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
 :root {
   --text-light: hsl(190, 77%, 88%);
   --sky-bg: hsl(208deg 100% 93%);
@@ -22,14 +27,19 @@
 
 /* =====Header===== */
 header {
+  position: relative;
+
   display: flex;
+
   height: 500px;
+
+  align-items: flex-end;
+
   background-color: var(--sky-bg);
   background-repeat: repeat-x;
   background-image: url(assets/images/waves.png), url(assets/images/clouds.png);
   background-position: bottom, top;
   background-size: 670px, 1100px;
-  align-items: flex-end;
 }
 
 .clouds {
@@ -47,6 +57,9 @@ header {
 }
 
 .dive-in-btn {
+  position: absolute;
+  left: calc(50% - 78px);
+
   border: none;
   border-radius: 5px;
 
@@ -57,7 +70,6 @@ header {
   background-color: transparent;
 
   margin-bottom: 20px;
-  margin-left: 240px;
 
   padding: 40px;
   padding-left: 42px;
@@ -66,7 +78,8 @@ header {
 
   cursor: pointer;
 
-  animation: float 3s linear infinite;
+  transition: all 500ms;
+  animation: float 2s linear 1s infinite;
 }
 
 .dive-in-btn p {
@@ -74,15 +87,24 @@ header {
   font-family: "VT323";
 }
 
+.dive-in-btn:hover {
+  background-image: url(assets/images/hover/button-hover.png);
+}
+
 /* ===== Main ===== */
 main {
   display: flex;
+  flex-direction: column;
   height: 100vh;
 
   align-items: center;
   justify-content: center;
 
   background: var(--background);
+}
+
+/* 1 section */
+.heading {
 }
 
 @keyframes float {
