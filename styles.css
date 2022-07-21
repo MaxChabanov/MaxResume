@@ -18,6 +18,9 @@ body {
     hsl(202deg 98% 37%),
     hsl(202deg 98% 25%)
   );
+
+  --text-lg: 50px;
+  --text-big: 22px;
 }
 
 @font-face {
@@ -83,7 +86,6 @@ header {
 
   cursor: pointer;
 
-  transition: all 500ms;
   animation: float 2s linear 1s infinite;
 }
 
@@ -110,11 +112,30 @@ main {
 
 /* 1 section */
 .about {
-  font-family: "VT323";
+  font-family: "Roboto";
+  color: white;
 }
 
-.heading {
-  letter-spacing: 3px;
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading-name {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.sub-heading {
+  color: #ffdb24;
+  font-size: var(--text-big);
+  letter-spacing: 1px;
+}
+
+.info {
+  display: flex;
 }
 
 @keyframes float {
