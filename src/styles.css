@@ -6,8 +6,11 @@
 }
 
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   scroll-behavior: smooth;
+
+  font-family: "Roboto";
+  image-rendering: pixelated;
 }
 
 :root {
@@ -21,6 +24,21 @@ body {
 
   --text-lg: 50px;
   --text-big: 22px;
+}
+
+@font-face {
+  font-family: "heading-pixel";
+  src: url(assets/fonts/pcsenior.ttf);
+}
+
+@font-face {
+  font-family: "subheading-pixel";
+  src: url(assets/fonts/FFFFORWA.TTF);
+}
+
+@font-face {
+  font-family: "text-pixel";
+  src: url(assets/fonts/prstart.ttf);
 }
 
 /* Scrollbar */
@@ -101,17 +119,19 @@ main {
   align-items: center;
   justify-content: center;
 
-  background: var(--background);
+  background: url(assets/images/bg.png);
 }
 
 /* 1 section */
 .about {
-  font-family: "Roboto";
   color: white;
+
+  font-family: "Roboto";
 }
 
 .introduction {
   display: flex;
+
   flex-direction: column;
   align-items: center;
 }
@@ -119,48 +139,70 @@ main {
 .heading-name {
   font-size: var(--text-lg);
   font-weight: 500;
-  letter-spacing: 2px;
+  font-family: "heading-pixel";
+  letter-spacing: -2px;
 }
 
 .sub-heading {
-  color: white;
+  color: #ffb92c;
+
   font-size: var(--text-big);
-  letter-spacing: 1px;
+  letter-spacing: 0;
+  font-family: "heading-pixel";
 }
 
 .sub-heading-name {
   color: #ffdb24;
+
+  margin-top: 10px;
+
+  font-family: "heading-pixel";
+  font-size: 16px;
+  letter-spacing: 0px;
 }
 
 .info {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
   width: 50vw;
+
+  display: flex;
+
+  justify-content: space-between;
+
   color: white;
+
+  margin-top: 45px;
+
+  font-family: "VT323";
+  font-size: 28px;
 }
 
 /* general info */
 .general-info,
-.languages-info {
-  max-width: 300px;
+.skills-info {
+  max-width: 340px;
+
   display: flex;
+
+  margin-right: 20px;
+
   flex-direction: column;
   align-items: center;
+
   text-align: center;
-  margin-right: 20px;
 }
 
 .general-info-text,
-.languages-info-text {
+.skills-info-text {
   margin-top: 20px;
 }
 
 /* photo */
 
 .my-photo {
-  background-color: white;
   width: 300px;
+
+  background-color: white;
+
   border-radius: 5%;
 }
 
@@ -168,10 +210,16 @@ main {
   position: absolute;
 }
 
-/* languages info */
-.languages-info {
+/* skills info */
+.skills-info {
   margin-left: 20px;
   margin-right: 0;
+}
+
+/* skills */
+
+.skills-list {
+  text-align: left;
 }
 
 @keyframes float {
