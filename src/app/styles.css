@@ -28,17 +28,17 @@ body {
 
 @font-face {
   font-family: "heading-pixel";
-  src: url(assets/fonts/pcsenior.ttf);
+  src: url(../assets/fonts/pcsenior.ttf);
 }
 
 @font-face {
   font-family: "subheading-pixel";
-  src: url(assets/fonts/FFFFORWA.TTF);
+  src: url(../assets/fonts/FFFFORWA.TTF);
 }
 
 @font-face {
   font-family: "text-pixel";
-  src: url(assets/fonts/prstart.ttf);
+  src: url(../assets/fonts/prstart.ttf);
 }
 
 /* Scrollbar */
@@ -58,7 +58,8 @@ header {
 
   background-color: var(--sky-bg);
   background-repeat: repeat-x;
-  background-image: url(assets/images/waves.png), url(assets/images/clouds.png);
+  background-image: url(../assets/images/waves.png),
+    url(../assets/images/clouds.png);
   background-position: bottom, top;
   background-size: 670px, 1100px;
 }
@@ -84,7 +85,7 @@ header {
   border: none;
   border-radius: 5px;
 
-  background-image: url(assets/images/button.png);
+  background-image: url(../assets/images/button.png);
   background-repeat: no-repeat;
   background-position: top;
   background-size: 120px;
@@ -119,7 +120,7 @@ main {
   align-items: center;
   justify-content: center;
 
-  background: url(assets/images/bg.png);
+  background: url(../assets/images/bg.png);
 }
 
 /* 1 section */
