@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta content="width=device-width, initial-scale=1.0" />
     <title>Max Chabanov</title>
-    <link rel="icon" href="assets/logo.svg" />
+    <link rel="icon" href="assets/images/logo.svg" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <!--===Fonts===-->
@@ -13,16 +13,69 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header>
-      <img src="assets/boat.png" alt="boat" class="boat" />
-      <p>Dive in?</p>
+      <img
+        src="assets/images/boat.png"
+        alt="boat"
+        class="boat"
+        draggable="false"
+      />
+      <button class="dive-in-btn"><p>Dive in</p></button>
     </header>
-    <main></main>
+    <main>
+      <section class="about" id="about">
+        <div class="introduction">
+          <h1 class="heading-name">Max Chabanov</h1>
+          <h3 class="sub-heading sub-heading-name">
+            Web developer, designer and pixel artist
+          </h3>
+        </div>
+        <div class="info">
+          <div class="general-info">
+            <h3 class="sub-heading">About</h3>
+            <p class="general-info-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam
+              minima tenetur animi deleniti aliquam alias rem itaque sapiente,
+              voluptatibus amet ullam quaerat iste sunt quae labore sequi
+              voluptas exercitationem? Perspiciatis.
+            </p>
+          </div>
+          <div class="photo-container">
+            <img src="assets/images/me.png" class="my-photo" alt="photo" />
+          </div>
+          <div class="languages-info">
+            <h3 class="sub-heading">Languages</h3>
+
+            <p class="languages-info-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam
+              minima tenetur animi deleniti aliquam alias rem itaque sapiente,
+              voluptatibus amet ullam quaerat iste sunt quae labore sequi
+              voluptas exercitationem? Perspiciatis.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="about">
+        <h1 class="heading">Max Chabanov</h1>
+        <h3>Web developer, pixel artist and designer</h3>
+      </section> -->
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
     <script type="text/javascript" src="scripts.js"></script>
   </body>
 </html>
