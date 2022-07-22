@@ -23,11 +23,6 @@ body {
   --text-big: 22px;
 }
 
-@font-face {
-  font-family: "VT323";
-  src: url(assets/MyFont-Regular.otf);
-}
-
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 0;
@@ -79,8 +74,7 @@ header {
 
   margin-bottom: 20px;
 
-  padding: 40px;
-  padding-left: 42px;
+  padding: 40px 40px 41px 42px;
 
   user-select: none;
 
@@ -102,7 +96,7 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 200vh;
 
   align-items: center;
   justify-content: center;
@@ -129,13 +123,55 @@ main {
 }
 
 .sub-heading {
-  color: #ffdb24;
+  color: white;
   font-size: var(--text-big);
   letter-spacing: 1px;
 }
 
+.sub-heading-name {
+  color: #ffdb24;
+}
+
 .info {
   display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 50vw;
+  color: white;
+}
+
+/* general info */
+.general-info,
+.languages-info {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.general-info-text,
+.languages-info-text {
+  margin-top: 20px;
+}
+
+/* photo */
+
+.my-photo {
+  background-color: white;
+  width: 300px;
+  border-radius: 5%;
+}
+
+.arrow-me {
+  position: absolute;
+}
+
+/* languages info */
+.languages-info {
+  margin-left: 20px;
+  margin-right: 0;
 }
 
 @keyframes float {
@@ -147,5 +183,12 @@ main {
   }
   100% {
     margin-bottom: 20px;
+  }
+}
+
+/* Responsive */
+@media screen and (min-width: 865px) {
+  .info {
+    width: auto;
   }
 }
