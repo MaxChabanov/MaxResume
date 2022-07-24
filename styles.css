@@ -26,6 +26,13 @@ body {
   --text-big: 22px;
 }
 
+a {
+  color: wheat;
+}
+a:hover {
+  color: hsl(39, 80%, 76%);
+}
+
 @font-face {
   font-family: "heading-pixel";
   src: url(./assets/fonts/pcsenior.ttf);
@@ -38,7 +45,7 @@ body {
 
 @font-face {
   font-family: "text-pixel";
-  src: url(./assets/fonts/prstart.ttf);
+  src: url(./assets/fonts/orange-kid.ttf);
 }
 
 /* Scrollbar */
@@ -179,10 +186,11 @@ main {
 
 /* general info */
 .general-info,
-.skills-info {
+.skills-info,
+.framework-info {
   max-width: 340px;
 
-  display: flex;
+  display: inline-flex;
 
   margin-right: 20px;
 
@@ -192,19 +200,27 @@ main {
   text-align: center;
 }
 
+.framework-info {
+  margin-left: 50px;
+  margin-right: 0px;
+}
+
 .general-info-text,
 .skills-info-text {
+  font-size: 26px;
   margin-top: 20px;
 }
 
 /* photo */
 
+.photo-container {
+  height: 310px;
+
+  position: relative;
+}
+
 .my-photo {
-  width: 300px;
-
-  background-color: white;
-
-  border-radius: 5%;
+  width: 310px;
 }
 
 .arrow-me {
@@ -213,14 +229,85 @@ main {
 
 /* skills info */
 .skills-info {
-  margin-left: 20px;
+  margin-top: 60px;
   margin-right: 0;
 }
 
-/* skills */
+.skill {
+  position: relative;
 
-.skills-list {
-  text-align: left;
+  width: 340px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+  padding-bottom: 4px;
+
+  font-family: "text-pixel";
+  font-size: 28px;
+
+  outline-offset: -3px;
+}
+
+.pixel {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  background: #01629c;
+}
+
+.pixel-top-left {
+  top: 0;
+  left: 0;
+}
+
+.pixel-top-right {
+  top: 0;
+  left: calc(100% - 5px);
+}
+
+.pixel-bottom-left {
+  top: calc(100% - 5px);
+  left: 0;
+}
+
+.pixel-bottom-right {
+  top: calc(100% - 5px);
+  left: calc(100% - 5px);
+}
+
+.skill-html {
+  background: linear-gradient(to right, #f16529 95%, transparent 0%);
+  outline: solid #f16529;
+}
+.skill-css {
+  background: linear-gradient(to right, #3273ff 85%, transparent 0%);
+  outline: solid #3273ff;
+}
+.skill-js {
+  background: linear-gradient(to right, #f7e018 80%, transparent 0%);
+  outline: solid #f7e018;
+  color: black;
+}
+
+.skill-css-framework {
+  background: linear-gradient(to right, #8411fa 65%, transparent 0%);
+  outline: solid #8411fa;
+}
+.skill-angular {
+  background: linear-gradient(to right, #de002d 50%, transparent 0%);
+  outline: solid #de002d;
+}
+.skill-jquery {
+  background: linear-gradient(to right, #f6df18 75%, transparent 0%);
+  outline: solid #f6df18;
+  color: black;
 }
 
 @keyframes float {
