@@ -5,7 +5,7 @@ $(".dive-in-btn").click(function () {
   setTimeout(() => {
     $([document.documentElement, document.body]).animate(
       {
-        scrollTop: $("#about").offset().top,
+        scrollTop: $("#anchor-about").offset().top,
       },
       2000
     );
