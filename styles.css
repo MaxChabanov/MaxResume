@@ -58,6 +58,14 @@ a:hover {
   width: 0;
 }
 
+/* Diver */
+.diver {
+  position: fixed;
+  left: 20px;
+  top: calc(50% - 80px);
+  width: 80px;
+}
+
 /* =====Header===== */
 header {
   position: relative;
@@ -76,12 +84,9 @@ header {
   background-size: 670px, 1100px;
 
   animation: waves 3s linear infinite forwards,
-    clouds 90s linear infinite forwards;
-}
+    clouds 400s linear infinite forwards;
 
-.clouds {
-  width: 100vw;
-  display: flex;
+  image-rendering: auto;
 }
 
 .boat {
@@ -91,6 +96,8 @@ header {
   margin-left: 55px;
 
   animation: float 3s linear infinite;
+
+  image-rendering: pixelated;
 }
 
 .dive-in-btn {
@@ -112,6 +119,8 @@ header {
   cursor: pointer;
 
   animation: float 3s linear infinite;
+
+  image-rendering: pixelated;
 }
 
 .dive-in-btn p {
