@@ -245,10 +245,6 @@ main {
   width: 310px;
 }
 
-.arrow-me {
-  position: absolute;
-}
-
 /* skills info */
 .skills-info {
   margin-top: 60px;
@@ -380,10 +376,44 @@ main {
 .steering-wheel-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 50px;
 }
 .steering-wheel {
   width: 100px;
+}
+
+.arrow {
+  width: 70px;
+  height: 60px;
+
+  margin: 0 25px;
+
+  cursor: pointer;
+  transition: 100ms;
+}
+.arrow:hover {
+  filter: invert(0.1);
+}
+.arrow-left {
+  transform: rotate(90deg);
+}
+.arrow-right {
+  transform: rotate(-90deg);
+}
+
+.arrow-nav {
+  position: fixed;
+  left: 0;
+  top: 10px;
+  margin: 0;
+}
+
+.arrow-up {
+  transform: rotate(-180deg);
+}
+.arrow-down {
+  top: calc(100% - 70px);
 }
 
 /* Responsive */
