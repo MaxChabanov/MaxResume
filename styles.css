@@ -39,6 +39,8 @@ a:hover {
 .anchor {
   width: 100%;
   height: 5px;
+
+  margin-bottom: 10px;
 }
 
 @font-face {
@@ -332,7 +334,7 @@ main {
 .projects-section {
   max-width: 100vw;
 
-  margin-top: 500px;
+  margin-top: 300px;
 }
 
 .projects {
@@ -390,10 +392,6 @@ main {
   margin: 0 25px;
 
   cursor: pointer;
-  transition: 100ms;
-}
-.arrow:hover {
-  filter: invert(0.1);
 }
 .arrow-left {
   transform: rotate(90deg);
@@ -406,14 +404,25 @@ main {
   position: fixed;
   left: 0;
   top: 10px;
+
   margin: 0;
+
+  transition: opacity 1s, height 300ms;
+  opacity: 0;
 }
 
 .arrow-up {
   transform: rotate(-180deg);
 }
+.arrow-up:hover {
+  height: 65px;
+}
+
 .arrow-down {
   top: calc(100% - 70px);
+}
+.arrow-down:hover {
+  height: 65px;
 }
 
 /* Responsive */
