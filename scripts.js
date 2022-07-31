@@ -19,31 +19,29 @@ $(".dive-in-btn").click(function () {
 });
 
 $(".arrow-up").click(function () {
-  $(this).unbind("toggle").unbind("click");
+  if (!$("body").is(":animated")) {
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $(document).scrollTop() - 1000,
+      },
+      2000
+    );
 
-  $([document.documentElement, document.body]).animate(
-    {
-      scrollTop: $(document).scrollTop() - 1000,
-    },
-    2000,
-    function () {
-      console.log(".arrow-up");
-      $(".arrow-up").bind("toggle").bind("click");
-    }
-  );
-
-  currentSection--;
+    currentSection--;
+  }
 });
 
 $(".arrow-down").click(function () {
-  $([document.documentElement, document.body]).animate(
-    {
-      scrollTop: $(document).scrollTop() + 1000,
-    },
-    2000
-  );
+  if (!$("body").is(":animated")) {
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $(document).scrollTop() + 1000,
+      },
+      2000
+    );
 
-  currentSection++;
+    currentSection++;
+  }
 });
 
 $(".arrow-right").click(function () {
