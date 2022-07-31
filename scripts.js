@@ -1,4 +1,4 @@
-let level = 0;
+let currentSection = 0; // 0 = header; 1 = about; 2 = projects
 
 $(".dive-in-btn").click(function () {
   $("body").css({
@@ -11,21 +11,28 @@ $(".dive-in-btn").click(function () {
       },
       2000,
       function () {
-        $(".arrow-nav").css("opacity", "1");
+        $(".arrow-nav").css("left", "0");
       }
     );
-    level = 1;
+    currentSection = 1;
   }, 1000);
 });
 
-console.log($(".arrow-up"));
 $(".arrow-up").click(function () {
+  $(this).unbind("toggle").unbind("click");
+
   $([document.documentElement, document.body]).animate(
     {
       scrollTop: $(document).scrollTop() - 1000,
     },
-    2000
+    2000,
+    function () {
+      console.log(".arrow-up");
+      $(".arrow-up").bind("toggle").bind("click");
+    }
   );
+
+  currentSection--;
 });
 
 $(".arrow-down").click(function () {
@@ -35,4 +42,21 @@ $(".arrow-down").click(function () {
     },
     2000
   );
+
+  currentSection++;
+});
+
+$(".arrow-right").click(function () {
+  let oldMargin = parseInt($(".projects").css("margin-left"));
+
+  if (oldMargin >= -1400) {
+    $(".projects").css("margin-left", oldMargin - 280);
+  }
+});
+
+$(".arrow-left").click(function () {
+  let oldMargin = parseInt($(".projects").css("margin-left"));
+  if (oldMargin <= 500) {
+    $(".projects").css("margin-left", oldMargin + 280);
+  }
 });

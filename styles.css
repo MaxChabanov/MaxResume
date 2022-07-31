@@ -344,6 +344,8 @@ main {
   display: flex;
 
   margin-top: 70px;
+
+  transition: 500ms;
 }
 
 .project {
@@ -392,6 +394,8 @@ main {
   margin: 0 25px;
 
   cursor: pointer;
+
+  transition: left 1s, height 300ms;
 }
 .arrow-left {
   transform: rotate(90deg);
@@ -400,15 +404,17 @@ main {
   transform: rotate(-90deg);
 }
 
+.arrow-right:hover,
+.arrow-left:hover {
+  height: 65px;
+}
+
 .arrow-nav {
   position: fixed;
-  left: 0;
+  left: -100%;
   top: 10px;
 
   margin: 0;
-
-  transition: opacity 1s, height 300ms;
-  opacity: 0;
 }
 
 .arrow-up {
