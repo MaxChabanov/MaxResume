@@ -68,10 +68,16 @@ a:hover {
 
 /* Diver */
 .diver {
+  width: 60px;
+
   position: fixed;
-  left: 20px;
+  left: 150px;
   top: calc(50% - 80px);
-  width: 80px;
+
+  transition: 500ms;
+
+  transform: scale(-1, 0);
+  z-index: 0;
 }
 
 /* =====Header===== */
@@ -101,11 +107,12 @@ header {
   width: 210px;
   height: 210px;
 
-  margin-left: 55px;
+  margin-left: 120px;
 
   animation: float 3s linear infinite;
 
   image-rendering: pixelated;
+  z-index: 1;
 }
 
 .dive-in-btn {
@@ -345,7 +352,7 @@ main {
 
   margin-top: 70px;
 
-  transition: 500ms;
+  transition: 1s;
 }
 
 .project {
@@ -471,5 +478,41 @@ main {
   }
   100% {
     background-position-x: center, 1100px;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(-1, 0);
+    top: calc(65% - 80px);
+  }
+  20% {
+    transform: scale(-1, 1);
+    top: calc(57% - 80px);
+  }
+  45% {
+    transform: scale(-1.2, 1);
+  }
+  46% {
+    transform: scale(-1, 1);
+  }
+  100% {
+    transform: scale(-1, 1);
+    top: calc(57% - 80px);
+  }
+}
+
+@keyframes dive {
+  0% {
+    top: calc(57% - 80px);
+    transform: scale(-1, 1);
+  }
+  50% {
+    top: calc(57% - 80px);
+    transform: scale(-1, 0.6);
+  }
+  100% {
+    top: calc(57% - 80px);
+    transform: scale(-1, 1.1);
   }
 }
