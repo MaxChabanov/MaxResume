@@ -7,10 +7,13 @@
 
 body {
   /* overflow: hidden; */
+  overflow-x: hidden;
   scroll-behavior: smooth;
 
   font-family: "Roboto";
   image-rendering: pixelated;
+
+  color: white;
 }
 
 :root {
@@ -36,6 +39,8 @@ a:hover {
 .anchor {
   width: 100%;
   height: 5px;
+
+  margin-bottom: 10px;
 }
 
 @font-face {
@@ -55,6 +60,9 @@ a:hover {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
+  width: 0;
+}
+::-webkit-scrollbar-track {
   width: 0;
 }
 
@@ -136,19 +144,17 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  height: 200vh;
+  height: 500vh;
 
   align-items: center;
-  justify-content: center;
 
   background: url(./assets/images/bg.webp);
 }
 
-/* 1 section */
-.about {
-  color: white;
+/* about section */
 
-  font-family: "Roboto";
+.about {
+  margin-top: 500px;
 }
 
 .introduction {
@@ -158,7 +164,11 @@ main {
   align-items: center;
 }
 
-.heading-name {
+.heading {
+  display: flex;
+  justify-content: center;
+
+  color: white;
   font-size: var(--text-lg);
   font-weight: 500;
   font-family: "heading-pixel";
@@ -235,10 +245,6 @@ main {
 
 .my-photo {
   width: 310px;
-}
-
-.arrow-me {
-  position: absolute;
 }
 
 /* skills info */
@@ -322,6 +328,107 @@ main {
   background: linear-gradient(to right, #f6df18 75%, transparent 0%);
   outline: solid #f6df18;
   color: black;
+}
+
+/* projects section */
+.projects-section {
+  max-width: 100vw;
+
+  margin-top: 300px;
+}
+
+.projects {
+  width: 200vw;
+  max-width: 300vw;
+
+  display: flex;
+
+  margin-top: 70px;
+
+  transition: 500ms;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 250px;
+  height: 290px;
+
+  background-repeat: no-repeat;
+  background-size: 250px, 210px;
+  background-position: center;
+  margin: 0 30px;
+}
+
+.project-1 {
+  background-image: url(assets/images/projects/frame.png),
+    url(assets/images/projects/project-404.png);
+}
+
+.project-2 {
+  background-image: url(assets/images/projects/frame.png),
+    url(assets/images/projects/project-trello.png);
+}
+
+.project-img {
+  width: 170px;
+  height: 220px;
+}
+
+.steering-wheel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.steering-wheel {
+  width: 100px;
+}
+
+.arrow {
+  width: 70px;
+  height: 60px;
+
+  margin: 0 25px;
+
+  cursor: pointer;
+
+  transition: left 1s, height 300ms;
+}
+.arrow-left {
+  transform: rotate(90deg);
+}
+.arrow-right {
+  transform: rotate(-90deg);
+}
+
+.arrow-right:hover,
+.arrow-left:hover {
+  height: 65px;
+}
+
+.arrow-nav {
+  position: fixed;
+  left: -100%;
+  top: 10px;
+
+  margin: 0;
+}
+
+.arrow-up {
+  transform: rotate(-180deg);
+}
+.arrow-up:hover {
+  height: 65px;
+}
+
+.arrow-down {
+  top: calc(100% - 70px);
+}
+.arrow-down:hover {
+  height: 65px;
 }
 
 /* Responsive */
