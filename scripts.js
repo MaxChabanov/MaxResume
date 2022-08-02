@@ -7,7 +7,7 @@ $(".dive-in-btn").click(function () {
 
   $(".diver").css(
     "animation",
-    "appear 10s 1s, dive 3s 7s, jump 3s 9.6s forwards"
+    "appear 10s 1s, dive 3s 7s, jump 3s 9.8s forwards, swimUp 2s 13.5s forwards"
   );
 
   setTimeout(() => {
@@ -21,7 +21,7 @@ $(".dive-in-btn").click(function () {
       }
     );
     currentSection = 1;
-  }, 15000);
+  }, 13000);
 });
 
 $(".arrow-up").click(function () {
