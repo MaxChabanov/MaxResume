@@ -5,23 +5,23 @@ $(".dive-in-btn").click(function () {
     overflowY: "visible",
   });
 
-  $(".diver").css("animation", "appear 10s 1s forwards");
-  setTimeout(() => {
-    $(".diver").css("animation", "dive 3s forwards");
+  $(".diver").css(
+    "animation",
+    "appear 10s 1s, dive 3s 7s, jump 3s 9.6s forwards"
+  );
 
-    setTimeout(() => {
-      $([document.documentElement, document.body]).animate(
-        {
-          scrollTop: $("#anchor-about").offset().top,
-        },
-        2000,
-        function () {
-          $(".arrow-nav").css("left", "0");
-        }
-      );
-      currentSection = 1;
-    }, 7000);
-  }, 10000);
+  setTimeout(() => {
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#anchor-about").offset().top,
+      },
+      2000,
+      function () {
+        $(".arrow-nav").css("left", "0");
+      }
+    );
+    currentSection = 1;
+  }, 15000);
 });
 
 $(".arrow-up").click(function () {

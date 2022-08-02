@@ -78,6 +78,8 @@ a:hover {
 
   transform: scale(-1, 0);
   z-index: 0;
+
+  animation-direction: forwards;
 }
 
 /* =====Header===== */
@@ -507,12 +509,27 @@ main {
     top: calc(57% - 80px);
     transform: scale(-1, 1);
   }
-  50% {
+  80% {
     top: calc(57% - 80px);
     transform: scale(-1, 0.6);
   }
   100% {
     top: calc(57% - 80px);
     transform: scale(-1, 1.1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: scale(-1, 1) rotate(0deg);
+    top: calc(57% - 80px);
+  }
+  30% {
+    top: calc(45% - 80px);
+  }
+  100% {
+    transform: scale(-1, 1) rotate(360deg);
+    left: 10px;
+    top: calc(70% - 80px);
   }
 }
