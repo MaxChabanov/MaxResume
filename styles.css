@@ -509,9 +509,13 @@ main {
     top: calc(57% - 80px);
     transform: scale(-1, 1);
   }
-  90% {
+  80% {
     top: calc(57% - 80px);
     transform: scale(-1, 0.6);
+  }
+  90% {
+    top: calc(57% - 80px);
+    transform: scale(-1, 1.1);
   }
   100% {
     top: calc(57% - 80px);
@@ -529,7 +533,7 @@ main {
   }
   100% {
     transform: scale(-1, 1) rotate(360deg);
-    left: 10px;
+    left: 20px;
     top: calc(70% - 80px);
   }
 }
